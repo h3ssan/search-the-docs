@@ -1,0 +1,21 @@
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "${APP_BIND}:${APP_PORT}:8080"
+    restart: always
+    environment:
+      - DEBUG=${DEBUG}
+      - HOST=${HOST}
+      - PORT=${PORT}
+      - OPENSEARCH_HOST=${OPENSEARCH_HOST}
+      - OPENSEARCH_PORT=${OPENSEARCH_PORT}
+      - OPENSEARCH_USERNAME=${OPENSEARCH_USERNAME}
+      - OPENSEARCH_PASSWORD=${OPENSEARCH_PASSWORD}
+    networks:
+      - net-opensearch
+
+networks:
+  net-opensearch:
+    external: true

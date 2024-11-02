@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ops, something not found</title>
+    <style>
+        body {
+            color: #CBD0D0;
+            background-color: #33373A;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, a, span, p, li, ol, ul, article {
+            color: #CBD0D0;
+        }
+    </style>
+</head>
+<body>
+    <!-- TODO: Make it more obvious, not too boring -->
+    <h3>Ops, looks like there is something not found</h3>
+    {% if error %}
+        {{ error }}
+    {% endif %}
+</body>
+</html>
